@@ -6,10 +6,11 @@ from vega_datasets import data
 from streamlit_vega_lite import altair_component
 
 st.set_page_config(
-    page_title="My Title",
-    page_icon=None,
+    page_title="Death and Assaults of Federal Officers in the USA",
+    page_icon="📊",
     layout="wide",
     initial_sidebar_state="collapsed",
+    menu_items={"About": "Data Viz Team"},
 )
 
 # data
@@ -22,10 +23,25 @@ assault_count_by_state = (
 )
 assault_count_by_state.reset_index(inplace=True)
 
+stateid_map = {"49": 1}
+
 
 @st.cache
 def get_state_by_id(state_id: int):
-    return assault_count_by_state.loc[assault_count_by_state["id"] == state_id]
+    # FIXME: No idea why this is happening.
+    # When Wyoming is selected, the emitted id is 52, but it should be 56.
+    if state_id == 52:
+        state_id = 56
+    d = assault_count_by_state.loc[assault_count_by_state["id"] == state_id]
+    print(d)
+    return d.to_dict("records")[0]
+
+
+@st.cache
+def get_total_count(state_id=None):
+    if state_id is None:
+        return assault_count_by_state["count"].sum()
+    return get_state_by_id(state_id)["count"]
 
 
 @st.cache
@@ -114,7 +130,6 @@ def build_cars():
 # Build charts
 assault_map = build_assault_map()
 cars = build_cars()
-pie = build_weapon_pie()
 
 # Markup
 st.title("Death & Assaults of Federal Officers in the USA")
@@ -123,17 +138,26 @@ st.header("Map of number of assaults in the USA")
 
 # st.altair_chart(assault_map, use_container_width=True)
 state_selection = altair_component(assault_map)
+selected_state = None
 
 if "_vgsid_" in state_selection:
     state_id = state_selection["_vgsid_"][0]
+    st.write(state_id)
+    st.write(
+        assault_count_by_state.loc[assault_count_by_state["id"] == state_id]
+    )
+    # FIXME: fix state_id issue
     row = get_state_by_id(state_id)
-    if row is None or row.empty:
-        row = get_state_by_id(56)
-    st.write(row)
+    selected_state = row
+    # st.write(
+    #    f"{selected_state['state']}: {int(selected_state['count'])} assaults or deaths"
+    # )
 else:
-    st.write("All states")
+    selected_state = None
+    st.write(f"All states: {int(get_total_count())} assaults or deaths")
 
-st.write(assault_count_by_state)
+# selected_state["state"] if selected_state else None
+pie = build_weapon_pie(selected_state["state"] if selected_state else None)
 
 # Two cols
 col1, col2 = st.columns([4, 3])
