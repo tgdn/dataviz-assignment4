@@ -3,6 +3,7 @@ import pandas as pd
 import altair as alt
 import streamlit as st
 from vega_datasets import data
+from streamlit_vega_lite import altair_component
 
 st.set_page_config(
     page_title="My Title",
@@ -20,6 +21,11 @@ assault_count_by_state = (
     df[["id", "state", "count"]].groupby(["id", "state"]).sum()
 )
 assault_count_by_state.reset_index(inplace=True)
+
+
+@st.cache
+def get_state_by_id(state_id: int):
+    return assault_count_by_state.loc[assault_count_by_state["id"] == state_id]
 
 
 @st.cache
@@ -52,7 +58,11 @@ def build_weapon_pie(state=None):
     # return pie + text
     base = alt.Chart(source).encode(
         theta=alt.Theta("values:Q", stack=True),
-        color=alt.Color("category:N", legend=None),
+        color=alt.Color(
+            "category:N",
+            legend=None,
+            scale=alt.Scale(reverse=False, scheme="tableau10"),
+        ),
         radius=alt.Radius(
             "values", scale=alt.Scale(type="sqrt", zero=True, rangeMin=20)
         ),
@@ -64,31 +74,33 @@ def build_weapon_pie(state=None):
 
 @st.cache(allow_output_mutation=True)
 def build_assault_map():
+    selection = alt.selection_single()
+    color = alt.condition(
+        selection,
+        alt.Color(
+            "count:Q", scale=alt.Scale(reverse=False, scheme="lightorange")
+        ),
+        alt.value("#ddd"),
+    )
+
     return (
         alt.Chart(states)
         .mark_geoshape()
-        .encode(color=alt.Color("count:Q"))
+        .encode(color=color, tooltip=["state:N", "count:Q"])
         .transform_lookup(
             lookup="id",
-            from_=alt.LookupData(assault_count_by_state, "id", ["count"]),
+            from_=alt.LookupData(
+                assault_count_by_state, "id", ["count", "state"]
+            ),
         )
-        .project("albersUsa")
+        .properties(width=650, height=500, projection={"type": "albersUsa"})
+        .add_selection(selection)
     )
 
 
-# Markup
-st.title("Death & Assaults of Federal Officers in the USA")
-
-st.header("Map of number of killings and assaults in the USA")
-assault_map = build_assault_map()
-st.altair_chart(assault_map, use_container_width=True)
-
-# Two cols
-col1, col2 = st.columns([4, 3])
-with col1:
-    st.subheader("Assaults outcome per department")
+def build_cars():
     cars = data.cars()
-    chart = (
+    return (
         alt.Chart(cars)
         .mark_bar()
         .encode(
@@ -97,10 +109,38 @@ with col1:
             color="Origin:N",
         )
     )
-    st.altair_chart(chart, use_container_width=True)
 
+
+# Build charts
+assault_map = build_assault_map()
+cars = build_cars()
+pie = build_weapon_pie()
+
+# Markup
+st.title("Death & Assaults of Federal Officers in the USA")
+
+st.header("Map of number of assaults in the USA")
+
+# st.altair_chart(assault_map, use_container_width=True)
+state_selection = altair_component(assault_map)
+
+if "_vgsid_" in state_selection:
+    state_id = state_selection["_vgsid_"][0]
+    row = get_state_by_id(state_id)
+    if row is None or row.empty:
+        row = get_state_by_id(56)
+    st.write(row)
+else:
+    st.write("All states")
+
+st.write(assault_count_by_state)
+
+# Two cols
+col1, col2 = st.columns([4, 3])
+with col1:
+    st.subheader("Assaults outcome per department")
+    st.altair_chart(cars, use_container_width=True)
 
 with col2:
     st.subheader("Assaults by weapon")
-    pie = build_weapon_pie()
     st.altair_chart(pie, use_container_width=True)

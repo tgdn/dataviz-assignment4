@@ -13,11 +13,15 @@ certifi==2021.10.8
 cffi==1.15.0
 charset-normalizer==2.0.12
 click==8.0.4
+click-plugins==1.1.1
+cligj==0.7.2
 debugpy==1.6.0
 decorator==5.1.1
 defusedxml==0.7.1
 entrypoints==0.4
 executing==0.8.3
+Fiona==1.8.21
+geopandas==0.10.2
 gitdb==4.0.9
 GitPython==3.1.27
 idna==3.3
@@ -36,6 +40,7 @@ jupyterlab-widgets==1.1.0
 MarkupSafe==2.1.1
 matplotlib-inline==0.1.3
 mistune==0.8.4
+munch==2.5.0
 nbclient==0.5.13
 nbconvert==6.4.4
 nbformat==5.2.0
@@ -62,6 +67,7 @@ pydeck==0.7.1
 Pygments==2.11.2
 Pympler==1.0.1
 pyparsing==3.0.7
+pyproj==3.3.0
 pyrsistent==0.18.1
 python-dateutil==2.8.2
 pytz==2022.1
@@ -70,11 +76,13 @@ pyzmq==22.3.0
 requests==2.27.1
 semver==2.13.0
 Send2Trash==1.8.0
+Shapely==1.8.1.post1
 six==1.16.0
 smmap==5.0.0
 soupsieve==2.3.1
 stack-data==0.2.0
 streamlit==1.8.0
+streamlit-vega-lite==0.1.0
 tenacity==8.0.1
 terminado==0.13.3
 testpath==0.6.0
