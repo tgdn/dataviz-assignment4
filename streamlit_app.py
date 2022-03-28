@@ -23,16 +23,68 @@ assault_count_by_state = (
 )
 assault_count_by_state.reset_index(inplace=True)
 
-stateid_map = {"49": 1}
+# Incorrect mapping between geoshape id and state ids.
+# We use the following map to convert.
+stateid_map = {
+    "1": 2,
+    "11": 10,
+    "12": 12,
+    "13": 13,
+    "14": 19,
+    "15": 16,
+    "16": 17,
+    "17": 18,
+    "18": 20,
+    "19": 21,
+    "2": 15,
+    "20": 22,
+    "21": 25,
+    "22": 24,
+    "23": 23,
+    "24": 26,
+    "25": 27,
+    "26": 29,
+    "27": 28,
+    "28": 30,
+    "29": 37,
+    "30": 38,
+    "31": 31,
+    "32": 33,
+    "33": 34,
+    "34": 35,
+    "35": 32,
+    "36": 36,
+    "37": 39,
+    "38": 40,
+    "39": 41,
+    "4": 1,
+    "40": 42,
+    "41": 44,
+    "42": 45,
+    "43": 46,
+    "44": 47,
+    "45": 48,
+    "46": 49,
+    "47": 51,
+    "48": 50,
+    "49": 53,
+    "5": 5,
+    "50": 55,
+    "51": 54,
+    "52": 56,
+    "6": 4,
+    "7": 6,
+    "8": 8,
+    "9": 9,
+}
 
 
 @st.cache
 def get_state_by_id(state_id: int):
-    # FIXME: No idea why this is happening.
-    # When Wyoming is selected, the emitted id is 52, but it should be 56.
-    if state_id == 52:
-        state_id = 56
-    d = assault_count_by_state.loc[assault_count_by_state["id"] == state_id]
+    # Fix geoshape id and state id.
+    real_id = stateid_map.get(state_id)
+    print(real_id)
+    d = assault_count_by_state.loc[assault_count_by_state["id"] == real_id]
     print(d)
     return d.to_dict("records")[0]
 
@@ -136,24 +188,20 @@ st.title("Death & Assaults of Federal Officers in the USA")
 
 st.header("Map of number of assaults in the USA")
 
-# st.altair_chart(assault_map, use_container_width=True)
 state_selection = altair_component(assault_map)
 selected_state = None
 
 if "_vgsid_" in state_selection:
-    state_id = state_selection["_vgsid_"][0]
-    st.write(state_id)
-    st.write(
-        assault_count_by_state.loc[assault_count_by_state["id"] == state_id]
-    )
-    # FIXME: fix state_id issue
-    row = get_state_by_id(state_id)
-    selected_state = row
-    # st.write(
-    #    f"{selected_state['state']}: {int(selected_state['count'])} assaults or deaths"
-    # )
+    state_id = str(state_selection["_vgsid_"][0])
+    selected_state = get_state_by_id(state_id)
 else:
     selected_state = None
+
+if selected_state:
+    st.write(
+        f"{selected_state['state']}: {int(selected_state['count'])} assaults or deaths"
+    )
+else:
     st.write(f"All states: {int(get_total_count())} assaults or deaths")
 
 # selected_state["state"] if selected_state else None
