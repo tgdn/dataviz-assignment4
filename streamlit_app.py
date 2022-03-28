@@ -180,19 +180,6 @@ def build_assault_map():
     )
 
 
-def build_cars():
-    cars = data.cars()
-    return (
-        alt.Chart(cars)
-        .mark_bar()
-        .encode(
-            x=alt.X("Miles_per_Gallon:Q", bin=alt.Bin(maxbins=30)),
-            y="count()",
-            color="Origin:N",
-        )
-    )
-
-
 def build_dpt_bars():
     return (
         alt.Chart(daf)
