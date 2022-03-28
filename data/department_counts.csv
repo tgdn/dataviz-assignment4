@@ -1,0 +1,43 @@
+,department,weapon,count
+0,U.S. Department of Defense,firearm,15.0
+1,U.S. Department of Defense,cutting_instrument,5.0
+2,U.S. Department of Defense,bomb,0.0
+3,U.S. Department of Defense,blunt_instrument,1.0
+4,U.S. Department of Defense,personal_weapons,118.0
+5,U.S. Department of Defense,vehicle,7.0
+6,U.S. Department of Defense,other,12.0
+7,U.S. Department of Homeland Security,firearm,6.0
+8,U.S. Department of Homeland Security,cutting_instrument,0.0
+9,U.S. Department of Homeland Security,bomb,0.0
+10,U.S. Department of Homeland Security,blunt_instrument,171.0
+11,U.S. Department of Homeland Security,personal_weapons,65.0
+12,U.S. Department of Homeland Security,vehicle,18.0
+13,U.S. Department of Homeland Security,other,170.0
+14,U.S. Department of the Interior,firearm,32.0
+15,U.S. Department of the Interior,cutting_instrument,10.0
+16,U.S. Department of the Interior,bomb,0.0
+17,U.S. Department of the Interior,blunt_instrument,6.0
+18,U.S. Department of the Interior,personal_weapons,427.0
+19,U.S. Department of the Interior,vehicle,115.0
+20,U.S. Department of the Interior,other,236.0
+21,U.S. Department of the Treasury,firearm,0.0
+22,U.S. Department of the Treasury,cutting_instrument,0.0
+23,U.S. Department of the Treasury,bomb,0.0
+24,U.S. Department of the Treasury,blunt_instrument,0.0
+25,U.S. Department of the Treasury,personal_weapons,1.0
+26,U.S. Department of the Treasury,vehicle,0.0
+27,U.S. Department of the Treasury,other,0.0
+28,U.S. Department of Justice,firearm,90.0
+29,U.S. Department of Justice,cutting_instrument,7.0
+30,U.S. Department of Justice,bomb,23.0
+31,U.S. Department of Justice,blunt_instrument,38.0
+32,U.S. Department of Justice,personal_weapons,23.0
+33,U.S. Department of Justice,vehicle,16.0
+34,U.S. Department of Justice,other,46.0
+35,U.S. Postal Service,firearm,0.0
+36,U.S. Postal Service,cutting_instrument,0.0
+37,U.S. Postal Service,bomb,0.0
+38,U.S. Postal Service,blunt_instrument,2.0
+39,U.S. Postal Service,personal_weapons,0.0
+40,U.S. Postal Service,vehicle,0.0
+41,U.S. Postal Service,other,4.0

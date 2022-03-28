@@ -13,9 +13,16 @@ st.set_page_config(
     menu_items={"About": "Data Viz Team"},
 )
 
-# data
-states = alt.topo_feature(data.us_10m.url, feature="states")
-df = pd.read_csv("./data/state_weapon_assaults.csv", parse_dates=True)
+
+@st.cache
+def read_data():
+    states = alt.topo_feature(data.us_10m.url, feature="states")
+    df = pd.read_csv("./data/state_weapon_assaults.csv", parse_dates=True)
+    daf = pd.read_csv("./data/department_counts.csv")
+    return states, df, daf
+
+
+states, df, daf = read_data()
 # Grouping
 # group by state
 assault_count_by_state = (
@@ -23,8 +30,8 @@ assault_count_by_state = (
 )
 assault_count_by_state.reset_index(inplace=True)
 
-# Incorrect mapping between geoshape id and state ids.
-# We use the following map to convert.
+# Because of an incorrect mapping between geoshape id and state ids,
+# we use the following map to convert.
 stateid_map = {
     "1": 2,
     "11": 10,
@@ -83,9 +90,7 @@ stateid_map = {
 def get_state_by_id(state_id: int):
     # Fix geoshape id and state id.
     real_id = stateid_map.get(state_id)
-    print(real_id)
     d = assault_count_by_state.loc[assault_count_by_state["id"] == real_id]
-    print(d)
     return d.to_dict("records")[0]
 
 
@@ -124,20 +129,24 @@ def build_weapon_pie(state=None):
     # pie = base.mark_arc(outerRadius=120)
     # text = base.mark_text(radius=140, size=10).encode(text="category:N")
     # return pie + text
-    base = alt.Chart(source).encode(
-        theta=alt.Theta("values:Q", stack=True),
-        color=alt.Color(
-            "category:N",
-            legend=None,
-            scale=alt.Scale(reverse=False, scheme="tableau10"),
-        ),
-        radius=alt.Radius(
-            "values", scale=alt.Scale(type="sqrt", zero=True, rangeMin=20)
-        ),
+    base = (
+        alt.Chart(source)
+        .encode(
+            theta=alt.Theta("values:Q", stack=True),
+            color=alt.Color(
+                "category:N",
+                scale=alt.Scale(reverse=False, scheme="tableau10"),
+            ),
+            radius=alt.Radius(
+                "values", scale=alt.Scale(type="sqrt", zero=True, rangeMin=20)
+            ),
+            tooltip=["category", "values"],
+        )
+        .transform_filter(alt.datum.values > 0)
     )
     c1 = base.mark_arc(innerRadius=10, stroke="#fff")
     c2 = base.mark_text(radiusOffset=40).encode(text="category:N")
-    return c1 + c2
+    return (c1 + c2).configure_view(strokeWidth=0)
 
 
 @st.cache(allow_output_mutation=True)
@@ -146,7 +155,11 @@ def build_assault_map():
     color = alt.condition(
         selection,
         alt.Color(
-            "count:Q", scale=alt.Scale(reverse=False, scheme="lightorange")
+            "count:Q",
+            scale=alt.Scale(reverse=False, scheme="lightorange"),
+            legend=alt.Legend(
+                title="Count", direction="horizontal", orient="right"
+            ),
         ),
         alt.value("#ddd"),
     )
@@ -163,6 +176,7 @@ def build_assault_map():
         )
         .properties(width=650, height=500, projection={"type": "albersUsa"})
         .add_selection(selection)
+        .configure_view(strokeWidth=0)
     )
 
 
@@ -179,9 +193,22 @@ def build_cars():
     )
 
 
+def build_dpt_bars():
+    return (
+        alt.Chart(daf)
+        .mark_bar(size=30)
+        .encode(
+            x=alt.X("count:Q", stack="zero"),
+            y=alt.Y("department:N"),
+            color=alt.Color("weapon:N"),
+            tooltip=["weapon", "count"],
+        )
+        .properties(height=250, width=600)
+    )
+
+
 # Build charts
 assault_map = build_assault_map()
-cars = build_cars()
 
 # Markup
 st.title("Death & Assaults of Federal Officers in the USA")
@@ -204,15 +231,11 @@ if selected_state:
 else:
     st.write(f"All states: {int(get_total_count())} assaults or deaths")
 
-# selected_state["state"] if selected_state else None
+dpt_bars = build_dpt_bars()
 pie = build_weapon_pie(selected_state["state"] if selected_state else None)
 
-# Two cols
-col1, col2 = st.columns([4, 3])
-with col1:
-    st.subheader("Assaults outcome per department")
-    st.altair_chart(cars, use_container_width=True)
+st.subheader("Assaults outcome per department")
+st.altair_chart(dpt_bars, use_container_width=True)
 
-with col2:
-    st.subheader("Assaults by weapon")
-    st.altair_chart(pie, use_container_width=True)
+st.subheader("Assaults by weapon")
+st.altair_chart(pie, use_container_width=True)
