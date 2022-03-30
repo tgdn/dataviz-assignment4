@@ -6,8 +6,6 @@ import streamlit.components.v1 as components
 from vega_datasets import data
 from streamlit_vega_lite import altair_component
 
-import config
-
 st.set_page_config(
     page_title="Death and Assaults of Federal Officers in the USA",
     page_icon="📊",
