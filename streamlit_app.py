@@ -5,11 +5,13 @@ import streamlit as st
 from vega_datasets import data
 from streamlit_vega_lite import altair_component
 
+import config
+
 st.set_page_config(
     page_title="Death and Assaults of Federal Officers in the USA",
     page_icon="📊",
     layout="wide",
-    initial_sidebar_state="collapsed",
+    initial_sidebar_state="expanded",
     menu_items={"About": "Data Viz Team"},
 )
 
@@ -23,12 +25,6 @@ def read_data():
 
 
 states, df, daf = read_data()
-# Grouping
-# group by state
-assault_count_by_state = (
-    df[["id", "state", "count"]].groupby(["id", "state"]).sum()
-)
-assault_count_by_state.reset_index(inplace=True)
 
 # Because of an incorrect mapping between geoshape id and state ids,
 # we use the following map to convert.
@@ -87,18 +83,26 @@ stateid_map = {
 
 
 @st.cache
-def get_state_by_id(state_id: int):
+def get_assault_count_by_state(selected_weapons):
+    res = df.loc[df.weapon.isin(selected_weapons)]
+    res = res[["id", "state", "count"]].groupby(["id", "state"]).sum()
+    return res.reset_index()
+
+
+@st.cache
+def get_state_by_id(state_id: int, selected_weapons):
     # Fix geoshape id and state id.
     real_id = stateid_map.get(state_id)
+    assault_count_by_state = get_assault_count_by_state(selected_weapons)
     d = assault_count_by_state.loc[assault_count_by_state["id"] == real_id]
     return d.to_dict("records")[0]
 
 
 @st.cache
-def get_total_count(state_id=None):
+def get_total_count(selected_weapons, state_id=None):
     if state_id is None:
-        return assault_count_by_state["count"].sum()
-    return get_state_by_id(state_id)["count"]
+        return get_assault_count_by_state(selected_weapons)["count"].sum()
+    return get_state_by_id(state_id, selected_weapons)["count"]
 
 
 @st.cache
@@ -150,16 +154,15 @@ def build_weapon_pie(state=None):
 
 
 @st.cache(allow_output_mutation=True)
-def build_assault_map():
+def build_assault_map(selected_weapons):
+    # df = get_assaults_by_weapon(selected_weapons)
     selection = alt.selection_single()
     color = alt.condition(
         selection,
         alt.Color(
             "count:Q",
             scale=alt.Scale(reverse=False, scheme="lightorange"),
-            legend=alt.Legend(
-                title="Count", direction="horizontal", orient="right"
-            ),
+            legend=alt.Legend(title="Count", orient="right"),
         ),
         alt.value("#ddd"),
     )
@@ -171,10 +174,12 @@ def build_assault_map():
         .transform_lookup(
             lookup="id",
             from_=alt.LookupData(
-                assault_count_by_state, "id", ["count", "state"]
+                get_assault_count_by_state(selected_weapons),
+                "id",
+                ["count", "state"],
             ),
         )
-        .properties(width=650, height=500, projection={"type": "albersUsa"})
+        .properties(width=500, projection={"type": "albersUsa"})
         .add_selection(selection)
         .configure_view(strokeWidth=0)
     )
@@ -194,35 +199,71 @@ def build_dpt_bars():
     )
 
 
-# Build charts
-assault_map = build_assault_map()
-
 # Markup
-st.title("Death & Assaults of Federal Officers in the USA")
+st.title("Deaths & Assaults of Federal Officers in the USA")
 
-st.header("Map of number of assaults in the USA")
-
-state_selection = altair_component(assault_map)
 selected_state = None
 
-if "_vgsid_" in state_selection:
-    state_id = str(state_selection["_vgsid_"][0])
-    selected_state = get_state_by_id(state_id)
-else:
-    selected_state = None
+with st.container():
 
-if selected_state:
-    st.write(
-        f"{selected_state['state']}: {int(selected_state['count'])} assaults or deaths"
-    )
-else:
-    st.write(f"All states: {int(get_total_count())} assaults or deaths")
+    col1, spacer, col2 = st.columns([5, 1, 6])
+    with col1:
+        st.markdown(
+            """
+    <p style="margin-top: 1rem; text-align: justify;">
+    This tool allows to visualize data in three different ways and allows to make easier interpretations of deaths and assaults in the United States.
+    It allows further insights by showing real world mapping of the data the use of a map.
+    It is versatile and allows to show various data points onto the same vizualisation.
+    </p>
+        """,
+            unsafe_allow_html=True,
+        )
 
-dpt_bars = build_dpt_bars()
-pie = build_weapon_pie(selected_state["state"] if selected_state else None)
+        with st.empty():
+            st.metric(
+                label="Selected State",
+                value="All states" if not selected_state else selected_state,
+            )
 
-st.subheader("Assaults outcome per department")
-st.altair_chart(dpt_bars, use_container_width=True)
+        container = st.container()
+        select_all = st.checkbox("Select all", value=True)
 
-st.subheader("Assaults by weapon")
-st.altair_chart(pie, use_container_width=True)
+        if select_all:
+            selected_weapons = container.multiselect(
+                "Weapons on map",
+                pd.unique(df["weapon"]).tolist(),
+                pd.unique(df["weapon"]).tolist(),
+            )
+        else:
+            selected_weapons = container.multiselect(
+                "Weapons on map",
+                pd.unique(df["weapon"]).tolist(),
+            )
+
+    with col2:
+        st.header("Deaths and assaults per state")
+        state_selection = altair_component(build_assault_map(selected_weapons))
+        # handle events
+        if "_vgsid_" in state_selection:
+            state_id = str(state_selection["_vgsid_"][0])
+            selected_state = get_state_by_id(state_id, selected_weapons)
+        else:
+            selected_state = None
+
+        if selected_state:
+            st.write(
+                f"{selected_state['state']}: {int(selected_state['count'])} assaults or deaths"
+            )
+        else:
+            st.write(
+                f"All states: {int(get_total_count(selected_weapons))} assaults or deaths"
+            )
+
+    dpt_bars = build_dpt_bars()
+    pie = build_weapon_pie(selected_state["state"] if selected_state else None)
+
+    st.subheader("Assaults outcome per department")
+    st.altair_chart(dpt_bars, use_container_width=True)
+
+    st.subheader("Assaults by weapon")
+    st.altair_chart(pie, use_container_width=True)
