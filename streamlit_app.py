@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 import altair as alt
 import streamlit as st
+import streamlit.components.v1 as components
 from vega_datasets import data
 from streamlit_vega_lite import altair_component
 
@@ -190,80 +191,87 @@ def build_dpt_bars():
         alt.Chart(daf)
         .mark_bar(size=30)
         .encode(
-            x=alt.X("count:Q", stack="zero"),
-            y=alt.Y("department:N"),
+            y=alt.Y("count:Q", stack="zero"),
+            x=alt.X("department:N"),
             color=alt.Color("weapon:N"),
             tooltip=["weapon", "count"],
         )
-        .properties(height=250, width=600)
+        .properties(height=600)
     )
 
 
 # Markup
-st.title("Deaths & Assaults of Federal Officers in the USA")
+st.title("Deaths & Assaults of Federal Officers in the USA in 2020")
 
 selected_state = None
 
-with st.container():
+col1, spacer, col2 = st.columns([5, 1, 6])
+with col1:
+    st.header("Focus")
+    st.markdown(
+        """
+<p style="text-align: justify;">
+This tool allows to visualize data in three different ways and allows to make easier interpretations of deaths and assaults in the United States.
+It allows further insights by showing real world mapping of the data the use of a map.
+It is versatile and allows to show various data points onto the same vizualisation.
+</p>
+    """,
+        unsafe_allow_html=True,
+    )
 
-    col1, spacer, col2 = st.columns([5, 1, 6])
-    with col1:
-        st.markdown(
-            """
-    <p style="margin-top: 1rem; text-align: justify;">
-    This tool allows to visualize data in three different ways and allows to make easier interpretations of deaths and assaults in the United States.
-    It allows further insights by showing real world mapping of the data the use of a map.
-    It is versatile and allows to show various data points onto the same vizualisation.
-    </p>
-        """,
-            unsafe_allow_html=True,
+    # This allows updating the state name live.
+    selected_state_container = st.container()
+
+    container = st.container()
+    select_all = st.checkbox("Select all", value=True)
+
+    if select_all:
+        selected_weapons = container.multiselect(
+            "Weapons on map",
+            pd.unique(df["weapon"]).tolist(),
+            pd.unique(df["weapon"]).tolist(),
+        )
+    else:
+        selected_weapons = container.multiselect(
+            "Weapons on map",
+            pd.unique(df["weapon"]).tolist(),
         )
 
-        with st.empty():
-            st.metric(
-                label="Selected State",
-                value="All states" if not selected_state else selected_state,
-            )
+with col2:
+    st.header("Deaths and assaults per state")
+    state_selection = altair_component(build_assault_map(selected_weapons))
+    # handle events
+    if "_vgsid_" in state_selection:
+        state_id = str(state_selection["_vgsid_"][0])
+        selected_state = get_state_by_id(state_id, selected_weapons)
+    else:
+        selected_state = None
 
-        container = st.container()
-        select_all = st.checkbox("Select all", value=True)
+    # This displays the selected state but above using st.container.
 
-        if select_all:
-            selected_weapons = container.multiselect(
-                "Weapons on map",
-                pd.unique(df["weapon"]).tolist(),
-                pd.unique(df["weapon"]).tolist(),
-            )
-        else:
-            selected_weapons = container.multiselect(
-                "Weapons on map",
-                pd.unique(df["weapon"]).tolist(),
-            )
+    selected_state_container.metric(
+        label="Selected State",
+        value="All states"
+        if not selected_state
+        else selected_state.get("state", ""),
+    )
 
-    with col2:
-        st.header("Deaths and assaults per state")
-        state_selection = altair_component(build_assault_map(selected_weapons))
-        # handle events
-        if "_vgsid_" in state_selection:
-            state_id = str(state_selection["_vgsid_"][0])
-            selected_state = get_state_by_id(state_id, selected_weapons)
-        else:
-            selected_state = None
+    selected_state_container.metric(
+        label="Deaths and assaults count",
+        value=int(selected_state["count"])
+        if selected_state
+        else int(get_total_count(selected_weapons)),
+    )
 
-        if selected_state:
-            st.write(
-                f"{selected_state['state']}: {int(selected_state['count'])} assaults or deaths"
-            )
-        else:
-            st.write(
-                f"All states: {int(get_total_count(selected_weapons))} assaults or deaths"
-            )
 
+col1, _, col2 = st.columns([5, 1, 6])
+
+with col1:
     dpt_bars = build_dpt_bars()
-    pie = build_weapon_pie(selected_state["state"] if selected_state else None)
-
-    st.subheader("Assaults outcome per department")
+    st.subheader("Types of weapons per department")
     st.altair_chart(dpt_bars, use_container_width=True)
 
-    st.subheader("Assaults by weapon")
+with col2:
+    pie = build_weapon_pie(selected_state["state"] if selected_state else None)
+    st.subheader("Types of weapons used")
     st.altair_chart(pie, use_container_width=True)
