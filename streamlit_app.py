@@ -7,7 +7,7 @@ from vega_datasets import data
 from streamlit_vega_lite import altair_component
 
 st.set_page_config(
-    page_title="Death and Assaults of Federal Officers in the USA",
+    page_title="Deaths and Assaults of Federal Officers in the USA",
     page_icon="📊",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -160,9 +160,6 @@ def build_assault_map(selected_weapons):
 
     if map_data.empty:
         return None
-        # return st.markdown(
-        #    "Please select a weapon on the left", unsafe_allow_html=True
-        # )
 
     selection = alt.selection_single()
     color = alt.condition(
