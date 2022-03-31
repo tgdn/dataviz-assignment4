@@ -14,6 +14,8 @@ st.set_page_config(
     menu_items={"About": "Data Viz Team"},
 )
 
+MAP_WIDTH = 480
+
 
 @st.cache
 def read_data():
@@ -154,7 +156,14 @@ def build_weapon_pie(state=None):
 
 @st.cache(allow_output_mutation=True)
 def build_assault_map(selected_weapons):
-    # df = get_assaults_by_weapon(selected_weapons)
+    map_data = get_assault_count_by_state(selected_weapons)
+
+    if map_data.empty:
+        return None
+        # return st.markdown(
+        #    "Please select a weapon on the left", unsafe_allow_html=True
+        # )
+
     selection = alt.selection_single()
     color = alt.condition(
         selection,
@@ -165,7 +174,6 @@ def build_assault_map(selected_weapons):
         ),
         alt.value("#ddd"),
     )
-
     return (
         alt.Chart(states)
         .mark_geoshape()
@@ -173,12 +181,12 @@ def build_assault_map(selected_weapons):
         .transform_lookup(
             lookup="id",
             from_=alt.LookupData(
-                get_assault_count_by_state(selected_weapons),
+                map_data,
                 "id",
                 ["count", "state"],
             ),
         )
-        .properties(width=500, projection={"type": "albersUsa"})
+        .properties(width=MAP_WIDTH, projection={"type": "albersUsa"})
         .add_selection(selection)
         .configure_view(strokeWidth=0)
     )
@@ -237,7 +245,21 @@ It is versatile and allows to show various data points onto the same vizualisati
 
 with col2:
     st.header("Deaths and assaults per state")
-    state_selection = altair_component(build_assault_map(selected_weapons))
+    assault_map = build_assault_map(selected_weapons)
+    state_selection = {}  # default value
+    if assault_map:
+        state_selection = altair_component(assault_map)
+    else:
+        st.altair_chart(
+            alt.Chart(states)
+            .mark_geoshape(fill="#ddd", stroke="#fff")
+            .properties(width=MAP_WIDTH, projection={"type": "albersUsa"})
+            .configure_view(strokeWidth=0)
+        )
+        st.markdown(
+            "<p style='font-size: 2rem;'>Please select a weapon on the left</p>",
+            unsafe_allow_html=True,
+        )
     # handle events
     if "_vgsid_" in state_selection:
         state_id = str(state_selection["_vgsid_"][0])
@@ -271,5 +293,6 @@ with col1:
 
 with col2:
     pie = build_weapon_pie(selected_state["state"] if selected_state else None)
-    st.subheader("Types of weapons used")
+    in_state = f"in {selected_state['state']}" if selected_state else ""
+    st.subheader(f"Types of weapons used {in_state}")
     st.altair_chart(pie, use_container_width=True)
