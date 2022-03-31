@@ -1,365 +1,365 @@
-,state,id,area,weapon,count
-0,Alabama,1,Alabama,firearm,0.0
-1,Alabama,1,Alabama,cutting_instrument,0.0
-2,Alabama,1,Alabama,bomb,0.0
-3,Alabama,1,Alabama,blunt_instrument,0.0
-4,Alabama,1,Alabama,personal_weapons,1.0
-5,Alabama,1,Alabama,vehicle,2.0
-6,Alabama,1,Alabama,other,2.0
-7,Alaska,2,Alaska,firearm,2.0
-8,Alaska,2,Alaska,cutting_instrument,0.0
-9,Alaska,2,Alaska,bomb,0.0
-10,Alaska,2,Alaska,blunt_instrument,0.0
-11,Alaska,2,Alaska,personal_weapons,1.0
-12,Alaska,2,Alaska,vehicle,0.0
-13,Alaska,2,Alaska,other,2.0
-14,Arizona,4,Arizona,firearm,7.0
-15,Arizona,4,Arizona,cutting_instrument,1.0
-16,Arizona,4,Arizona,bomb,0.0
-17,Arizona,4,Arizona,blunt_instrument,1.0
-18,Arizona,4,Arizona,personal_weapons,64.0
-19,Arizona,4,Arizona,vehicle,5.0
-20,Arizona,4,Arizona,other,19.0
-21,Arkansas,5,Arkansas,firearm,2.0
-22,Arkansas,5,Arkansas,cutting_instrument,0.0
-23,Arkansas,5,Arkansas,bomb,0.0
-24,Arkansas,5,Arkansas,blunt_instrument,0.0
-25,Arkansas,5,Arkansas,personal_weapons,0.0
-26,Arkansas,5,Arkansas,vehicle,2.0
-27,Arkansas,5,Arkansas,other,0.0
-28,California,6,California,firearm,0.0
-29,California,6,California,cutting_instrument,0.0
-30,California,6,California,bomb,0.0
-31,California,6,California,blunt_instrument,3.0
-32,California,6,California,personal_weapons,22.0
-33,California,6,California,vehicle,6.0
-34,California,6,California,other,6.0
-35,Colorado,8,Colorado,firearm,0.0
-36,Colorado,8,Colorado,cutting_instrument,0.0
-37,Colorado,8,Colorado,bomb,0.0
-38,Colorado,8,Colorado,blunt_instrument,0.0
-39,Colorado,8,Colorado,personal_weapons,17.0
-40,Colorado,8,Colorado,vehicle,7.0
-41,Colorado,8,Colorado,other,0.0
-42,Connecticut,9,Connecticut,firearm,0.0
-43,Connecticut,9,Connecticut,cutting_instrument,0.0
-44,Connecticut,9,Connecticut,bomb,0.0
-45,Connecticut,9,Connecticut,blunt_instrument,0.0
-46,Connecticut,9,Connecticut,personal_weapons,0.0
-47,Connecticut,9,Connecticut,vehicle,0.0
-48,Connecticut,9,Connecticut,other,0.0
-49,Delaware,10,Delaware,firearm,0.0
-50,Delaware,10,Delaware,cutting_instrument,0.0
-51,Delaware,10,Delaware,bomb,0.0
-52,Delaware,10,Delaware,blunt_instrument,0.0
-53,Delaware,10,Delaware,personal_weapons,0.0
-54,Delaware,10,Delaware,vehicle,0.0
-55,Delaware,10,Delaware,other,0.0
-56,District of Columbia,11,District of Columbia,firearm,1.0
-57,District of Columbia,11,District of Columbia,cutting_instrument,0.0
-58,District of Columbia,11,District of Columbia,bomb,0.0
-59,District of Columbia,11,District of Columbia,blunt_instrument,1.0
-60,District of Columbia,11,District of Columbia,personal_weapons,1.0
-61,District of Columbia,11,District of Columbia,vehicle,0.0
-62,District of Columbia,11,District of Columbia,other,19.0
-63,Florida,12,Florida,firearm,2.0
-64,Florida,12,Florida,cutting_instrument,0.0
-65,Florida,12,Florida,bomb,0.0
-66,Florida,12,Florida,blunt_instrument,0.0
-67,Florida,12,Florida,personal_weapons,22.0
-68,Florida,12,Florida,vehicle,0.0
-69,Florida,12,Florida,other,4.0
-70,Georgia,13,Georgia,firearm,3.0
-71,Georgia,13,Georgia,cutting_instrument,0.0
-72,Georgia,13,Georgia,bomb,0.0
-73,Georgia,13,Georgia,blunt_instrument,0.0
-74,Georgia,13,Georgia,personal_weapons,9.0
-75,Georgia,13,Georgia,vehicle,0.0
-76,Georgia,13,Georgia,other,0.0
-77,Hawaii,15,Hawaii,firearm,1.0
-78,Hawaii,15,Hawaii,cutting_instrument,3.0
-79,Hawaii,15,Hawaii,bomb,0.0
-80,Hawaii,15,Hawaii,blunt_instrument,0.0
-81,Hawaii,15,Hawaii,personal_weapons,11.0
-82,Hawaii,15,Hawaii,vehicle,0.0
-83,Hawaii,15,Hawaii,other,0.0
-84,Idaho,16,Idaho,firearm,21.0
-85,Idaho,16,Idaho,cutting_instrument,0.0
-86,Idaho,16,Idaho,bomb,0.0
-87,Idaho,16,Idaho,blunt_instrument,1.0
-88,Idaho,16,Idaho,personal_weapons,183.0
-89,Idaho,16,Idaho,vehicle,82.0
-90,Idaho,16,Idaho,other,0.0
-91,Illinois,17,Illinois,firearm,1.0
-92,Illinois,17,Illinois,cutting_instrument,0.0
-93,Illinois,17,Illinois,bomb,0.0
-94,Illinois,17,Illinois,blunt_instrument,2.0
-95,Illinois,17,Illinois,personal_weapons,3.0
-96,Illinois,17,Illinois,vehicle,0.0
-97,Illinois,17,Illinois,other,6.0
-98,Indiana,18,Indiana,firearm,2.0
-99,Indiana,18,Indiana,cutting_instrument,0.0
-100,Indiana,18,Indiana,bomb,0.0
-101,Indiana,18,Indiana,blunt_instrument,0.0
-102,Indiana,18,Indiana,personal_weapons,0.0
-103,Indiana,18,Indiana,vehicle,0.0
-104,Indiana,18,Indiana,other,0.0
-105,Iowa,19,Iowa,firearm,0.0
-106,Iowa,19,Iowa,cutting_instrument,0.0
-107,Iowa,19,Iowa,bomb,0.0
-108,Iowa,19,Iowa,blunt_instrument,0.0
-109,Iowa,19,Iowa,personal_weapons,0.0
-110,Iowa,19,Iowa,vehicle,0.0
-111,Iowa,19,Iowa,other,0.0
-112,Kansas,20,Kansas,firearm,0.0
-113,Kansas,20,Kansas,cutting_instrument,0.0
-114,Kansas,20,Kansas,bomb,0.0
-115,Kansas,20,Kansas,blunt_instrument,0.0
-116,Kansas,20,Kansas,personal_weapons,7.0
-117,Kansas,20,Kansas,vehicle,2.0
-118,Kansas,20,Kansas,other,1.0
-119,Kentucky,21,Kentucky,firearm,0.0
-120,Kentucky,21,Kentucky,cutting_instrument,0.0
-121,Kentucky,21,Kentucky,bomb,0.0
-122,Kentucky,21,Kentucky,blunt_instrument,0.0
-123,Kentucky,21,Kentucky,personal_weapons,9.0
-124,Kentucky,21,Kentucky,vehicle,2.0
-125,Kentucky,21,Kentucky,other,1.0
-126,Louisiana,22,Louisiana,firearm,1.0
-127,Louisiana,22,Louisiana,cutting_instrument,0.0
-128,Louisiana,22,Louisiana,bomb,0.0
-129,Louisiana,22,Louisiana,blunt_instrument,0.0
-130,Louisiana,22,Louisiana,personal_weapons,3.0
-131,Louisiana,22,Louisiana,vehicle,0.0
-132,Louisiana,22,Louisiana,other,0.0
-133,Maine,23,Maine,firearm,0.0
-134,Maine,23,Maine,cutting_instrument,0.0
-135,Maine,23,Maine,bomb,0.0
-136,Maine,23,Maine,blunt_instrument,0.0
-137,Maine,23,Maine,personal_weapons,0.0
-138,Maine,23,Maine,vehicle,0.0
-139,Maine,23,Maine,other,0.0
-140,Maryland,24,Maryland,firearm,1.0
-141,Maryland,24,Maryland,cutting_instrument,1.0
-142,Maryland,24,Maryland,bomb,0.0
-143,Maryland,24,Maryland,blunt_instrument,0.0
-144,Maryland,24,Maryland,personal_weapons,0.0
-145,Maryland,24,Maryland,vehicle,1.0
-146,Maryland,24,Maryland,other,1.0
-147,Massachusetts,25,Massachusetts,firearm,0.0
-148,Massachusetts,25,Massachusetts,cutting_instrument,0.0
-149,Massachusetts,25,Massachusetts,bomb,0.0
-150,Massachusetts,25,Massachusetts,blunt_instrument,0.0
-151,Massachusetts,25,Massachusetts,personal_weapons,0.0
-152,Massachusetts,25,Massachusetts,vehicle,1.0
-153,Massachusetts,25,Massachusetts,other,0.0
-154,Michigan,26,Michigan,firearm,5.0
-155,Michigan,26,Michigan,cutting_instrument,0.0
-156,Michigan,26,Michigan,bomb,0.0
-157,Michigan,26,Michigan,blunt_instrument,1.0
-158,Michigan,26,Michigan,personal_weapons,2.0
-159,Michigan,26,Michigan,vehicle,0.0
-160,Michigan,26,Michigan,other,3.0
-161,Minnesota,27,Minnesota,firearm,2.0
-162,Minnesota,27,Minnesota,cutting_instrument,5.0
-163,Minnesota,27,Minnesota,bomb,0.0
-164,Minnesota,27,Minnesota,blunt_instrument,1.0
-165,Minnesota,27,Minnesota,personal_weapons,4.0
-166,Minnesota,27,Minnesota,vehicle,2.0
-167,Minnesota,27,Minnesota,other,7.0
-168,Mississippi,28,Mississippi,firearm,3.0
-169,Mississippi,28,Mississippi,cutting_instrument,0.0
-170,Mississippi,28,Mississippi,bomb,0.0
-171,Mississippi,28,Mississippi,blunt_instrument,0.0
-172,Mississippi,28,Mississippi,personal_weapons,0.0
-173,Mississippi,28,Mississippi,vehicle,0.0
-174,Mississippi,28,Mississippi,other,0.0
-175,Missouri,29,Missouri,firearm,35.0
-176,Missouri,29,Missouri,cutting_instrument,0.0
-177,Missouri,29,Missouri,bomb,0.0
-178,Missouri,29,Missouri,blunt_instrument,1.0
-179,Missouri,29,Missouri,personal_weapons,1.0
-180,Missouri,29,Missouri,vehicle,0.0
-181,Missouri,29,Missouri,other,2.0
-182,Montana,30,Montana,firearm,5.0
-183,Montana,30,Montana,cutting_instrument,0.0
-184,Montana,30,Montana,bomb,0.0
-185,Montana,30,Montana,blunt_instrument,2.0
-186,Montana,30,Montana,personal_weapons,13.0
-187,Montana,30,Montana,vehicle,3.0
-188,Montana,30,Montana,other,0.0
-189,Nebraska,31,Nebraska,firearm,0.0
-190,Nebraska,31,Nebraska,cutting_instrument,0.0
-191,Nebraska,31,Nebraska,bomb,0.0
-192,Nebraska,31,Nebraska,blunt_instrument,0.0
-193,Nebraska,31,Nebraska,personal_weapons,0.0
-194,Nebraska,31,Nebraska,vehicle,0.0
-195,Nebraska,31,Nebraska,other,0.0
-196,Nevada,32,Nevada,firearm,2.0
-197,Nevada,32,Nevada,cutting_instrument,0.0
-198,Nevada,32,Nevada,bomb,0.0
-199,Nevada,32,Nevada,blunt_instrument,0.0
-200,Nevada,32,Nevada,personal_weapons,23.0
-201,Nevada,32,Nevada,vehicle,2.0
-202,Nevada,32,Nevada,other,1.0
-203,New Hampshire,33,New Hampshire,firearm,0.0
-204,New Hampshire,33,New Hampshire,cutting_instrument,0.0
-205,New Hampshire,33,New Hampshire,bomb,0.0
-206,New Hampshire,33,New Hampshire,blunt_instrument,0.0
-207,New Hampshire,33,New Hampshire,personal_weapons,0.0
-208,New Hampshire,33,New Hampshire,vehicle,0.0
-209,New Hampshire,33,New Hampshire,other,0.0
-210,New Jersey,34,New Jersey,firearm,4.0
-211,New Jersey,34,New Jersey,cutting_instrument,0.0
-212,New Jersey,34,New Jersey,bomb,0.0
-213,New Jersey,34,New Jersey,blunt_instrument,0.0
-214,New Jersey,34,New Jersey,personal_weapons,0.0
-215,New Jersey,34,New Jersey,vehicle,0.0
-216,New Jersey,34,New Jersey,other,0.0
-217,New Mexico,35,New Mexico,firearm,12.0
-218,New Mexico,35,New Mexico,cutting_instrument,2.0
-219,New Mexico,35,New Mexico,bomb,0.0
-220,New Mexico,35,New Mexico,blunt_instrument,0.0
-221,New Mexico,35,New Mexico,personal_weapons,33.0
-222,New Mexico,35,New Mexico,vehicle,0.0
-223,New Mexico,35,New Mexico,other,11.0
-224,New York,36,New York,firearm,2.0
-225,New York,36,New York,cutting_instrument,0.0
-226,New York,36,New York,bomb,0.0
-227,New York,36,New York,blunt_instrument,1.0
-228,New York,36,New York,personal_weapons,15.0
-229,New York,36,New York,vehicle,0.0
-230,New York,36,New York,other,6.0
-231,North Carolina,37,North Carolina,firearm,0.0
-232,North Carolina,37,North Carolina,cutting_instrument,0.0
-233,North Carolina,37,North Carolina,bomb,0.0
-234,North Carolina,37,North Carolina,blunt_instrument,0.0
-235,North Carolina,37,North Carolina,personal_weapons,12.0
-236,North Carolina,37,North Carolina,vehicle,1.0
-237,North Carolina,37,North Carolina,other,2.0
-238,North Dakota,38,North Dakota,firearm,0.0
-239,North Dakota,38,North Dakota,cutting_instrument,1.0
-240,North Dakota,38,North Dakota,bomb,0.0
-241,North Dakota,38,North Dakota,blunt_instrument,0.0
-242,North Dakota,38,North Dakota,personal_weapons,3.0
-243,North Dakota,38,North Dakota,vehicle,0.0
-244,North Dakota,38,North Dakota,other,66.0
-245,Ohio,39,Ohio,firearm,5.0
-246,Ohio,39,Ohio,cutting_instrument,0.0
-247,Ohio,39,Ohio,bomb,0.0
-248,Ohio,39,Ohio,blunt_instrument,0.0
-249,Ohio,39,Ohio,personal_weapons,0.0
-250,Ohio,39,Ohio,vehicle,0.0
-251,Ohio,39,Ohio,other,0.0
-252,Oklahoma,40,Oklahoma,firearm,0.0
-253,Oklahoma,40,Oklahoma,cutting_instrument,0.0
-254,Oklahoma,40,Oklahoma,bomb,0.0
-255,Oklahoma,40,Oklahoma,blunt_instrument,0.0
-256,Oklahoma,40,Oklahoma,personal_weapons,2.0
-257,Oklahoma,40,Oklahoma,vehicle,0.0
-258,Oklahoma,40,Oklahoma,other,0.0
-259,Oregon,41,Oregon,firearm,0.0
-260,Oregon,41,Oregon,cutting_instrument,4.0
-261,Oregon,41,Oregon,bomb,23.0
-262,Oregon,41,Oregon,blunt_instrument,203.0
-263,Oregon,41,Oregon,personal_weapons,13.0
-264,Oregon,41,Oregon,vehicle,2.0
-265,Oregon,41,Oregon,other,156.0
-266,Pennsylvania,42,Pennsylvania,firearm,4.0
-267,Pennsylvania,42,Pennsylvania,cutting_instrument,0.0
-268,Pennsylvania,42,Pennsylvania,bomb,0.0
-269,Pennsylvania,42,Pennsylvania,blunt_instrument,0.0
-270,Pennsylvania,42,Pennsylvania,personal_weapons,4.0
-271,Pennsylvania,42,Pennsylvania,vehicle,1.0
-272,Pennsylvania,42,Pennsylvania,other,3.0
-273,Rhode Island,44,Rhode Island,firearm,0.0
-274,Rhode Island,44,Rhode Island,cutting_instrument,0.0
-275,Rhode Island,44,Rhode Island,bomb,0.0
-276,Rhode Island,44,Rhode Island,blunt_instrument,0.0
-277,Rhode Island,44,Rhode Island,personal_weapons,0.0
-278,Rhode Island,44,Rhode Island,vehicle,0.0
-279,Rhode Island,44,Rhode Island,other,0.0
-280,South Carolina,45,South Carolina,firearm,0.0
-281,South Carolina,45,South Carolina,cutting_instrument,0.0
-282,South Carolina,45,South Carolina,bomb,0.0
-283,South Carolina,45,South Carolina,blunt_instrument,0.0
-284,South Carolina,45,South Carolina,personal_weapons,1.0
-285,South Carolina,45,South Carolina,vehicle,0.0
-286,South Carolina,45,South Carolina,other,0.0
-287,South Dakota,46,South Dakota,firearm,1.0
-288,South Dakota,46,South Dakota,cutting_instrument,1.0
-289,South Dakota,46,South Dakota,bomb,0.0
-290,South Dakota,46,South Dakota,blunt_instrument,0.0
-291,South Dakota,46,South Dakota,personal_weapons,8.0
-292,South Dakota,46,South Dakota,vehicle,3.0
-293,South Dakota,46,South Dakota,other,122.0
-294,Tennessee,47,Tennessee,firearm,2.0
-295,Tennessee,47,Tennessee,cutting_instrument,0.0
-296,Tennessee,47,Tennessee,bomb,0.0
-297,Tennessee,47,Tennessee,blunt_instrument,0.0
-298,Tennessee,47,Tennessee,personal_weapons,2.0
-299,Tennessee,47,Tennessee,vehicle,2.0
-300,Tennessee,47,Tennessee,other,0.0
-301,Texas,48,Texas,firearm,17.0
-302,Texas,48,Texas,cutting_instrument,2.0
-303,Texas,48,Texas,bomb,0.0
-304,Texas,48,Texas,blunt_instrument,1.0
-305,Texas,48,Texas,personal_weapons,25.0
-306,Texas,48,Texas,vehicle,3.0
-307,Texas,48,Texas,other,11.0
-308,Utah,49,Utah,firearm,0.0
-309,Utah,49,Utah,cutting_instrument,0.0
-310,Utah,49,Utah,bomb,0.0
-311,Utah,49,Utah,blunt_instrument,0.0
-312,Utah,49,Utah,personal_weapons,0.0
-313,Utah,49,Utah,vehicle,0.0
-314,Utah,49,Utah,other,0.0
-315,Vermont,50,Vermont,firearm,0.0
-316,Vermont,50,Vermont,cutting_instrument,0.0
-317,Vermont,50,Vermont,bomb,0.0
-318,Vermont,50,Vermont,blunt_instrument,0.0
-319,Vermont,50,Vermont,personal_weapons,0.0
-320,Vermont,50,Vermont,vehicle,0.0
-321,Vermont,50,Vermont,other,0.0
-322,Virginia,51,Virginia,firearm,0.0
-323,Virginia,51,Virginia,cutting_instrument,0.0
-324,Virginia,51,Virginia,bomb,0.0
-325,Virginia,51,Virginia,blunt_instrument,0.0
-326,Virginia,51,Virginia,personal_weapons,2.0
-327,Virginia,51,Virginia,vehicle,3.0
-328,Virginia,51,Virginia,other,2.0
-329,Washington,53,Washington,firearm,0.0
-330,Washington,53,Washington,cutting_instrument,0.0
-331,Washington,53,Washington,bomb,0.0
-332,Washington,53,Washington,blunt_instrument,0.0
-333,Washington,53,Washington,personal_weapons,64.0
-334,Washington,53,Washington,vehicle,21.0
-335,Washington,53,Washington,other,5.0
-336,West Virginia,54,West Virginia,firearm,0.0
-337,West Virginia,54,West Virginia,cutting_instrument,0.0
-338,West Virginia,54,West Virginia,bomb,0.0
-339,West Virginia,54,West Virginia,blunt_instrument,0.0
-340,West Virginia,54,West Virginia,personal_weapons,0.0
-341,West Virginia,54,West Virginia,vehicle,0.0
-342,West Virginia,54,West Virginia,other,0.0
-343,Wisconsin,55,Wisconsin,firearm,0.0
-344,Wisconsin,55,Wisconsin,cutting_instrument,0.0
-345,Wisconsin,55,Wisconsin,bomb,0.0
-346,Wisconsin,55,Wisconsin,blunt_instrument,0.0
-347,Wisconsin,55,Wisconsin,personal_weapons,18.0
-348,Wisconsin,55,Wisconsin,vehicle,0.0
-349,Wisconsin,55,Wisconsin,other,1.0
-350,Wyoming,56,Wyoming,firearm,0.0
-351,Wyoming,56,Wyoming,cutting_instrument,1.0
-352,Wyoming,56,Wyoming,bomb,0.0
-353,Wyoming,56,Wyoming,blunt_instrument,0.0
-354,Wyoming,56,Wyoming,personal_weapons,4.0
-355,Wyoming,56,Wyoming,vehicle,0.0
-356,Wyoming,56,Wyoming,other,1.0
-357,Puerto Rico,72,Puerto Rico,firearm,0.0
-358,Puerto Rico,72,Puerto Rico,cutting_instrument,1.0
-359,Puerto Rico,72,Puerto Rico,bomb,0.0
-360,Puerto Rico,72,Puerto Rico,blunt_instrument,0.0
-361,Puerto Rico,72,Puerto Rico,personal_weapons,1.0
-362,Puerto Rico,72,Puerto Rico,vehicle,2.0
-363,Puerto Rico,72,Puerto Rico,other,4.0
+,Unnamed: 0,state,id,area,weapon,count
+0,0,Alabama,1,Alabama,Firearm,0.0
+1,1,Alabama,1,Alabama,Cutting instrument,0.0
+2,2,Alabama,1,Alabama,Bomb,0.0
+3,3,Alabama,1,Alabama,Blunt instrument,0.0
+4,4,Alabama,1,Alabama,Personal weapons,1.0
+5,5,Alabama,1,Alabama,Vehicle,2.0
+6,6,Alabama,1,Alabama,Other,2.0
+7,7,Alaska,2,Alaska,Firearm,2.0
+8,8,Alaska,2,Alaska,Cutting instrument,0.0
+9,9,Alaska,2,Alaska,Bomb,0.0
+10,10,Alaska,2,Alaska,Blunt instrument,0.0
+11,11,Alaska,2,Alaska,Personal weapons,1.0
+12,12,Alaska,2,Alaska,Vehicle,0.0
+13,13,Alaska,2,Alaska,Other,2.0
+14,14,Arizona,4,Arizona,Firearm,7.0
+15,15,Arizona,4,Arizona,Cutting instrument,1.0
+16,16,Arizona,4,Arizona,Bomb,0.0
+17,17,Arizona,4,Arizona,Blunt instrument,1.0
+18,18,Arizona,4,Arizona,Personal weapons,64.0
+19,19,Arizona,4,Arizona,Vehicle,5.0
+20,20,Arizona,4,Arizona,Other,19.0
+21,21,Arkansas,5,Arkansas,Firearm,2.0
+22,22,Arkansas,5,Arkansas,Cutting instrument,0.0
+23,23,Arkansas,5,Arkansas,Bomb,0.0
+24,24,Arkansas,5,Arkansas,Blunt instrument,0.0
+25,25,Arkansas,5,Arkansas,Personal weapons,0.0
+26,26,Arkansas,5,Arkansas,Vehicle,2.0
+27,27,Arkansas,5,Arkansas,Other,0.0
+28,28,California,6,California,Firearm,0.0
+29,29,California,6,California,Cutting instrument,0.0
+30,30,California,6,California,Bomb,0.0
+31,31,California,6,California,Blunt instrument,3.0
+32,32,California,6,California,Personal weapons,22.0
+33,33,California,6,California,Vehicle,6.0
+34,34,California,6,California,Other,6.0
+35,35,Colorado,8,Colorado,Firearm,0.0
+36,36,Colorado,8,Colorado,Cutting instrument,0.0
+37,37,Colorado,8,Colorado,Bomb,0.0
+38,38,Colorado,8,Colorado,Blunt instrument,0.0
+39,39,Colorado,8,Colorado,Personal weapons,17.0
+40,40,Colorado,8,Colorado,Vehicle,7.0
+41,41,Colorado,8,Colorado,Other,0.0
+42,42,Connecticut,9,Connecticut,Firearm,0.0
+43,43,Connecticut,9,Connecticut,Cutting instrument,0.0
+44,44,Connecticut,9,Connecticut,Bomb,0.0
+45,45,Connecticut,9,Connecticut,Blunt instrument,0.0
+46,46,Connecticut,9,Connecticut,Personal weapons,0.0
+47,47,Connecticut,9,Connecticut,Vehicle,0.0
+48,48,Connecticut,9,Connecticut,Other,0.0
+49,49,Delaware,10,Delaware,Firearm,0.0
+50,50,Delaware,10,Delaware,Cutting instrument,0.0
+51,51,Delaware,10,Delaware,Bomb,0.0
+52,52,Delaware,10,Delaware,Blunt instrument,0.0
+53,53,Delaware,10,Delaware,Personal weapons,0.0
+54,54,Delaware,10,Delaware,Vehicle,0.0
+55,55,Delaware,10,Delaware,Other,0.0
+56,56,District of Columbia,11,District of Columbia,Firearm,1.0
+57,57,District of Columbia,11,District of Columbia,Cutting instrument,0.0
+58,58,District of Columbia,11,District of Columbia,Bomb,0.0
+59,59,District of Columbia,11,District of Columbia,Blunt instrument,1.0
+60,60,District of Columbia,11,District of Columbia,Personal weapons,1.0
+61,61,District of Columbia,11,District of Columbia,Vehicle,0.0
+62,62,District of Columbia,11,District of Columbia,Other,19.0
+63,63,Florida,12,Florida,Firearm,2.0
+64,64,Florida,12,Florida,Cutting instrument,0.0
+65,65,Florida,12,Florida,Bomb,0.0
+66,66,Florida,12,Florida,Blunt instrument,0.0
+67,67,Florida,12,Florida,Personal weapons,22.0
+68,68,Florida,12,Florida,Vehicle,0.0
+69,69,Florida,12,Florida,Other,4.0
+70,70,Georgia,13,Georgia,Firearm,3.0
+71,71,Georgia,13,Georgia,Cutting instrument,0.0
+72,72,Georgia,13,Georgia,Bomb,0.0
+73,73,Georgia,13,Georgia,Blunt instrument,0.0
+74,74,Georgia,13,Georgia,Personal weapons,9.0
+75,75,Georgia,13,Georgia,Vehicle,0.0
+76,76,Georgia,13,Georgia,Other,0.0
+77,77,Hawaii,15,Hawaii,Firearm,1.0
+78,78,Hawaii,15,Hawaii,Cutting instrument,3.0
+79,79,Hawaii,15,Hawaii,Bomb,0.0
+80,80,Hawaii,15,Hawaii,Blunt instrument,0.0
+81,81,Hawaii,15,Hawaii,Personal weapons,11.0
+82,82,Hawaii,15,Hawaii,Vehicle,0.0
+83,83,Hawaii,15,Hawaii,Other,0.0
+84,84,Idaho,16,Idaho,Firearm,21.0
+85,85,Idaho,16,Idaho,Cutting instrument,0.0
+86,86,Idaho,16,Idaho,Bomb,0.0
+87,87,Idaho,16,Idaho,Blunt instrument,1.0
+88,88,Idaho,16,Idaho,Personal weapons,183.0
+89,89,Idaho,16,Idaho,Vehicle,82.0
+90,90,Idaho,16,Idaho,Other,0.0
+91,91,Illinois,17,Illinois,Firearm,1.0
+92,92,Illinois,17,Illinois,Cutting instrument,0.0
+93,93,Illinois,17,Illinois,Bomb,0.0
+94,94,Illinois,17,Illinois,Blunt instrument,2.0
+95,95,Illinois,17,Illinois,Personal weapons,3.0
+96,96,Illinois,17,Illinois,Vehicle,0.0
+97,97,Illinois,17,Illinois,Other,6.0
+98,98,Indiana,18,Indiana,Firearm,2.0
+99,99,Indiana,18,Indiana,Cutting instrument,0.0
+100,100,Indiana,18,Indiana,Bomb,0.0
+101,101,Indiana,18,Indiana,Blunt instrument,0.0
+102,102,Indiana,18,Indiana,Personal weapons,0.0
+103,103,Indiana,18,Indiana,Vehicle,0.0
+104,104,Indiana,18,Indiana,Other,0.0
+105,105,Iowa,19,Iowa,Firearm,0.0
+106,106,Iowa,19,Iowa,Cutting instrument,0.0
+107,107,Iowa,19,Iowa,Bomb,0.0
+108,108,Iowa,19,Iowa,Blunt instrument,0.0
+109,109,Iowa,19,Iowa,Personal weapons,0.0
+110,110,Iowa,19,Iowa,Vehicle,0.0
+111,111,Iowa,19,Iowa,Other,0.0
+112,112,Kansas,20,Kansas,Firearm,0.0
+113,113,Kansas,20,Kansas,Cutting instrument,0.0
+114,114,Kansas,20,Kansas,Bomb,0.0
+115,115,Kansas,20,Kansas,Blunt instrument,0.0
+116,116,Kansas,20,Kansas,Personal weapons,7.0
+117,117,Kansas,20,Kansas,Vehicle,2.0
+118,118,Kansas,20,Kansas,Other,1.0
+119,119,Kentucky,21,Kentucky,Firearm,0.0
+120,120,Kentucky,21,Kentucky,Cutting instrument,0.0
+121,121,Kentucky,21,Kentucky,Bomb,0.0
+122,122,Kentucky,21,Kentucky,Blunt instrument,0.0
+123,123,Kentucky,21,Kentucky,Personal weapons,9.0
+124,124,Kentucky,21,Kentucky,Vehicle,2.0
+125,125,Kentucky,21,Kentucky,Other,1.0
+126,126,Louisiana,22,Louisiana,Firearm,1.0
+127,127,Louisiana,22,Louisiana,Cutting instrument,0.0
+128,128,Louisiana,22,Louisiana,Bomb,0.0
+129,129,Louisiana,22,Louisiana,Blunt instrument,0.0
+130,130,Louisiana,22,Louisiana,Personal weapons,3.0
+131,131,Louisiana,22,Louisiana,Vehicle,0.0
+132,132,Louisiana,22,Louisiana,Other,0.0
+133,133,Maine,23,Maine,Firearm,0.0
+134,134,Maine,23,Maine,Cutting instrument,0.0
+135,135,Maine,23,Maine,Bomb,0.0
+136,136,Maine,23,Maine,Blunt instrument,0.0
+137,137,Maine,23,Maine,Personal weapons,0.0
+138,138,Maine,23,Maine,Vehicle,0.0
+139,139,Maine,23,Maine,Other,0.0
+140,140,Maryland,24,Maryland,Firearm,1.0
+141,141,Maryland,24,Maryland,Cutting instrument,1.0
+142,142,Maryland,24,Maryland,Bomb,0.0
+143,143,Maryland,24,Maryland,Blunt instrument,0.0
+144,144,Maryland,24,Maryland,Personal weapons,0.0
+145,145,Maryland,24,Maryland,Vehicle,1.0
+146,146,Maryland,24,Maryland,Other,1.0
+147,147,Massachusetts,25,Massachusetts,Firearm,0.0
+148,148,Massachusetts,25,Massachusetts,Cutting instrument,0.0
+149,149,Massachusetts,25,Massachusetts,Bomb,0.0
+150,150,Massachusetts,25,Massachusetts,Blunt instrument,0.0
+151,151,Massachusetts,25,Massachusetts,Personal weapons,0.0
+152,152,Massachusetts,25,Massachusetts,Vehicle,1.0
+153,153,Massachusetts,25,Massachusetts,Other,0.0
+154,154,Michigan,26,Michigan,Firearm,5.0
+155,155,Michigan,26,Michigan,Cutting instrument,0.0
+156,156,Michigan,26,Michigan,Bomb,0.0
+157,157,Michigan,26,Michigan,Blunt instrument,1.0
+158,158,Michigan,26,Michigan,Personal weapons,2.0
+159,159,Michigan,26,Michigan,Vehicle,0.0
+160,160,Michigan,26,Michigan,Other,3.0
+161,161,Minnesota,27,Minnesota,Firearm,2.0
+162,162,Minnesota,27,Minnesota,Cutting instrument,5.0
+163,163,Minnesota,27,Minnesota,Bomb,0.0
+164,164,Minnesota,27,Minnesota,Blunt instrument,1.0
+165,165,Minnesota,27,Minnesota,Personal weapons,4.0
+166,166,Minnesota,27,Minnesota,Vehicle,2.0
+167,167,Minnesota,27,Minnesota,Other,7.0
+168,168,Mississippi,28,Mississippi,Firearm,3.0
+169,169,Mississippi,28,Mississippi,Cutting instrument,0.0
+170,170,Mississippi,28,Mississippi,Bomb,0.0
+171,171,Mississippi,28,Mississippi,Blunt instrument,0.0
+172,172,Mississippi,28,Mississippi,Personal weapons,0.0
+173,173,Mississippi,28,Mississippi,Vehicle,0.0
+174,174,Mississippi,28,Mississippi,Other,0.0
+175,175,Missouri,29,Missouri,Firearm,35.0
+176,176,Missouri,29,Missouri,Cutting instrument,0.0
+177,177,Missouri,29,Missouri,Bomb,0.0
+178,178,Missouri,29,Missouri,Blunt instrument,1.0
+179,179,Missouri,29,Missouri,Personal weapons,1.0
+180,180,Missouri,29,Missouri,Vehicle,0.0
+181,181,Missouri,29,Missouri,Other,2.0
+182,182,Montana,30,Montana,Firearm,5.0
+183,183,Montana,30,Montana,Cutting instrument,0.0
+184,184,Montana,30,Montana,Bomb,0.0
+185,185,Montana,30,Montana,Blunt instrument,2.0
+186,186,Montana,30,Montana,Personal weapons,13.0
+187,187,Montana,30,Montana,Vehicle,3.0
+188,188,Montana,30,Montana,Other,0.0
+189,189,Nebraska,31,Nebraska,Firearm,0.0
+190,190,Nebraska,31,Nebraska,Cutting instrument,0.0
+191,191,Nebraska,31,Nebraska,Bomb,0.0
+192,192,Nebraska,31,Nebraska,Blunt instrument,0.0
+193,193,Nebraska,31,Nebraska,Personal weapons,0.0
+194,194,Nebraska,31,Nebraska,Vehicle,0.0
+195,195,Nebraska,31,Nebraska,Other,0.0
+196,196,Nevada,32,Nevada,Firearm,2.0
+197,197,Nevada,32,Nevada,Cutting instrument,0.0
+198,198,Nevada,32,Nevada,Bomb,0.0
+199,199,Nevada,32,Nevada,Blunt instrument,0.0
+200,200,Nevada,32,Nevada,Personal weapons,23.0
+201,201,Nevada,32,Nevada,Vehicle,2.0
+202,202,Nevada,32,Nevada,Other,1.0
+203,203,New Hampshire,33,New Hampshire,Firearm,0.0
+204,204,New Hampshire,33,New Hampshire,Cutting instrument,0.0
+205,205,New Hampshire,33,New Hampshire,Bomb,0.0
+206,206,New Hampshire,33,New Hampshire,Blunt instrument,0.0
+207,207,New Hampshire,33,New Hampshire,Personal weapons,0.0
+208,208,New Hampshire,33,New Hampshire,Vehicle,0.0
+209,209,New Hampshire,33,New Hampshire,Other,0.0
+210,210,New Jersey,34,New Jersey,Firearm,4.0
+211,211,New Jersey,34,New Jersey,Cutting instrument,0.0
+212,212,New Jersey,34,New Jersey,Bomb,0.0
+213,213,New Jersey,34,New Jersey,Blunt instrument,0.0
+214,214,New Jersey,34,New Jersey,Personal weapons,0.0
+215,215,New Jersey,34,New Jersey,Vehicle,0.0
+216,216,New Jersey,34,New Jersey,Other,0.0
+217,217,New Mexico,35,New Mexico,Firearm,12.0
+218,218,New Mexico,35,New Mexico,Cutting instrument,2.0
+219,219,New Mexico,35,New Mexico,Bomb,0.0
+220,220,New Mexico,35,New Mexico,Blunt instrument,0.0
+221,221,New Mexico,35,New Mexico,Personal weapons,33.0
+222,222,New Mexico,35,New Mexico,Vehicle,0.0
+223,223,New Mexico,35,New Mexico,Other,11.0
+224,224,New York,36,New York,Firearm,2.0
+225,225,New York,36,New York,Cutting instrument,0.0
+226,226,New York,36,New York,Bomb,0.0
+227,227,New York,36,New York,Blunt instrument,1.0
+228,228,New York,36,New York,Personal weapons,15.0
+229,229,New York,36,New York,Vehicle,0.0
+230,230,New York,36,New York,Other,6.0
+231,231,North Carolina,37,North Carolina,Firearm,0.0
+232,232,North Carolina,37,North Carolina,Cutting instrument,0.0
+233,233,North Carolina,37,North Carolina,Bomb,0.0
+234,234,North Carolina,37,North Carolina,Blunt instrument,0.0
+235,235,North Carolina,37,North Carolina,Personal weapons,12.0
+236,236,North Carolina,37,North Carolina,Vehicle,1.0
+237,237,North Carolina,37,North Carolina,Other,2.0
+238,238,North Dakota,38,North Dakota,Firearm,0.0
+239,239,North Dakota,38,North Dakota,Cutting instrument,1.0
+240,240,North Dakota,38,North Dakota,Bomb,0.0
+241,241,North Dakota,38,North Dakota,Blunt instrument,0.0
+242,242,North Dakota,38,North Dakota,Personal weapons,3.0
+243,243,North Dakota,38,North Dakota,Vehicle,0.0
+244,244,North Dakota,38,North Dakota,Other,66.0
+245,245,Ohio,39,Ohio,Firearm,5.0
+246,246,Ohio,39,Ohio,Cutting instrument,0.0
+247,247,Ohio,39,Ohio,Bomb,0.0
+248,248,Ohio,39,Ohio,Blunt instrument,0.0
+249,249,Ohio,39,Ohio,Personal weapons,0.0
+250,250,Ohio,39,Ohio,Vehicle,0.0
+251,251,Ohio,39,Ohio,Other,0.0
+252,252,Oklahoma,40,Oklahoma,Firearm,0.0
+253,253,Oklahoma,40,Oklahoma,Cutting instrument,0.0
+254,254,Oklahoma,40,Oklahoma,Bomb,0.0
+255,255,Oklahoma,40,Oklahoma,Blunt instrument,0.0
+256,256,Oklahoma,40,Oklahoma,Personal weapons,2.0
+257,257,Oklahoma,40,Oklahoma,Vehicle,0.0
+258,258,Oklahoma,40,Oklahoma,Other,0.0
+259,259,Oregon,41,Oregon,Firearm,0.0
+260,260,Oregon,41,Oregon,Cutting instrument,4.0
+261,261,Oregon,41,Oregon,Bomb,23.0
+262,262,Oregon,41,Oregon,Blunt instrument,203.0
+263,263,Oregon,41,Oregon,Personal weapons,13.0
+264,264,Oregon,41,Oregon,Vehicle,2.0
+265,265,Oregon,41,Oregon,Other,156.0
+266,266,Pennsylvania,42,Pennsylvania,Firearm,4.0
+267,267,Pennsylvania,42,Pennsylvania,Cutting instrument,0.0
+268,268,Pennsylvania,42,Pennsylvania,Bomb,0.0
+269,269,Pennsylvania,42,Pennsylvania,Blunt instrument,0.0
+270,270,Pennsylvania,42,Pennsylvania,Personal weapons,4.0
+271,271,Pennsylvania,42,Pennsylvania,Vehicle,1.0
+272,272,Pennsylvania,42,Pennsylvania,Other,3.0
+273,273,Rhode Island,44,Rhode Island,Firearm,0.0
+274,274,Rhode Island,44,Rhode Island,Cutting instrument,0.0
+275,275,Rhode Island,44,Rhode Island,Bomb,0.0
+276,276,Rhode Island,44,Rhode Island,Blunt instrument,0.0
+277,277,Rhode Island,44,Rhode Island,Personal weapons,0.0
+278,278,Rhode Island,44,Rhode Island,Vehicle,0.0
+279,279,Rhode Island,44,Rhode Island,Other,0.0
+280,280,South Carolina,45,South Carolina,Firearm,0.0
+281,281,South Carolina,45,South Carolina,Cutting instrument,0.0
+282,282,South Carolina,45,South Carolina,Bomb,0.0
+283,283,South Carolina,45,South Carolina,Blunt instrument,0.0
+284,284,South Carolina,45,South Carolina,Personal weapons,1.0
+285,285,South Carolina,45,South Carolina,Vehicle,0.0
+286,286,South Carolina,45,South Carolina,Other,0.0
+287,287,South Dakota,46,South Dakota,Firearm,1.0
+288,288,South Dakota,46,South Dakota,Cutting instrument,1.0
+289,289,South Dakota,46,South Dakota,Bomb,0.0
+290,290,South Dakota,46,South Dakota,Blunt instrument,0.0
+291,291,South Dakota,46,South Dakota,Personal weapons,8.0
+292,292,South Dakota,46,South Dakota,Vehicle,3.0
+293,293,South Dakota,46,South Dakota,Other,122.0
+294,294,Tennessee,47,Tennessee,Firearm,2.0
+295,295,Tennessee,47,Tennessee,Cutting instrument,0.0
+296,296,Tennessee,47,Tennessee,Bomb,0.0
+297,297,Tennessee,47,Tennessee,Blunt instrument,0.0
+298,298,Tennessee,47,Tennessee,Personal weapons,2.0
+299,299,Tennessee,47,Tennessee,Vehicle,2.0
+300,300,Tennessee,47,Tennessee,Other,0.0
+301,301,Texas,48,Texas,Firearm,17.0
+302,302,Texas,48,Texas,Cutting instrument,2.0
+303,303,Texas,48,Texas,Bomb,0.0
+304,304,Texas,48,Texas,Blunt instrument,1.0
+305,305,Texas,48,Texas,Personal weapons,25.0
+306,306,Texas,48,Texas,Vehicle,3.0
+307,307,Texas,48,Texas,Other,11.0
+308,308,Utah,49,Utah,Firearm,0.0
+309,309,Utah,49,Utah,Cutting instrument,0.0
+310,310,Utah,49,Utah,Bomb,0.0
+311,311,Utah,49,Utah,Blunt instrument,0.0
+312,312,Utah,49,Utah,Personal weapons,0.0
+313,313,Utah,49,Utah,Vehicle,0.0
+314,314,Utah,49,Utah,Other,0.0
+315,315,Vermont,50,Vermont,Firearm,0.0
+316,316,Vermont,50,Vermont,Cutting instrument,0.0
+317,317,Vermont,50,Vermont,Bomb,0.0
+318,318,Vermont,50,Vermont,Blunt instrument,0.0
+319,319,Vermont,50,Vermont,Personal weapons,0.0
+320,320,Vermont,50,Vermont,Vehicle,0.0
+321,321,Vermont,50,Vermont,Other,0.0
+322,322,Virginia,51,Virginia,Firearm,0.0
+323,323,Virginia,51,Virginia,Cutting instrument,0.0
+324,324,Virginia,51,Virginia,Bomb,0.0
+325,325,Virginia,51,Virginia,Blunt instrument,0.0
+326,326,Virginia,51,Virginia,Personal weapons,2.0
+327,327,Virginia,51,Virginia,Vehicle,3.0
+328,328,Virginia,51,Virginia,Other,2.0
+329,329,Washington,53,Washington,Firearm,0.0
+330,330,Washington,53,Washington,Cutting instrument,0.0
+331,331,Washington,53,Washington,Bomb,0.0
+332,332,Washington,53,Washington,Blunt instrument,0.0
+333,333,Washington,53,Washington,Personal weapons,64.0
+334,334,Washington,53,Washington,Vehicle,21.0
+335,335,Washington,53,Washington,Other,5.0
+336,336,West Virginia,54,West Virginia,Firearm,0.0
+337,337,West Virginia,54,West Virginia,Cutting instrument,0.0
+338,338,West Virginia,54,West Virginia,Bomb,0.0
+339,339,West Virginia,54,West Virginia,Blunt instrument,0.0
+340,340,West Virginia,54,West Virginia,Personal weapons,0.0
+341,341,West Virginia,54,West Virginia,Vehicle,0.0
+342,342,West Virginia,54,West Virginia,Other,0.0
+343,343,Wisconsin,55,Wisconsin,Firearm,0.0
+344,344,Wisconsin,55,Wisconsin,Cutting instrument,0.0
+345,345,Wisconsin,55,Wisconsin,Bomb,0.0
+346,346,Wisconsin,55,Wisconsin,Blunt instrument,0.0
+347,347,Wisconsin,55,Wisconsin,Personal weapons,18.0
+348,348,Wisconsin,55,Wisconsin,Vehicle,0.0
+349,349,Wisconsin,55,Wisconsin,Other,1.0
+350,350,Wyoming,56,Wyoming,Firearm,0.0
+351,351,Wyoming,56,Wyoming,Cutting instrument,1.0
+352,352,Wyoming,56,Wyoming,Bomb,0.0
+353,353,Wyoming,56,Wyoming,Blunt instrument,0.0
+354,354,Wyoming,56,Wyoming,Personal weapons,4.0
+355,355,Wyoming,56,Wyoming,Vehicle,0.0
+356,356,Wyoming,56,Wyoming,Other,1.0
+357,357,Puerto Rico,72,Puerto Rico,Firearm,0.0
+358,358,Puerto Rico,72,Puerto Rico,Cutting instrument,1.0
+359,359,Puerto Rico,72,Puerto Rico,Bomb,0.0
+360,360,Puerto Rico,72,Puerto Rico,Blunt instrument,0.0
+361,361,Puerto Rico,72,Puerto Rico,Personal weapons,1.0
+362,362,Puerto Rico,72,Puerto Rico,Vehicle,2.0
+363,363,Puerto Rico,72,Puerto Rico,Other,4.0
